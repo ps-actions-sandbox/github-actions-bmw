@@ -1,0 +1,12 @@
+name: Matrix Demo
+
+on: [workflow_dispatch]
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18, 20]
+    steps:
+      - run: echo "I am using Node Version ${{ matrix.node-version }}"
