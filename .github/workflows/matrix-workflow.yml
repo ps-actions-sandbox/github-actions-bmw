@@ -8,5 +8,7 @@ jobs:
     strategy:
       matrix:
         node-version: [18, 20]
+        config: [debug, release]
     steps:
       - run: echo "I am using Node Version ${{ matrix.node-version }}"
+      - run: echo "I am using Node Version ${{ matrix.config }}"
